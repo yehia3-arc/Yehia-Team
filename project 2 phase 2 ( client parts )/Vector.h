@@ -178,7 +178,6 @@ public:
         cout << endl;
     }
 
-
     ~Vector() {
         delete[] arr;
     }
