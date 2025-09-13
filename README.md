@@ -6,7 +6,6 @@ name project team:
 2- mohamed osman 
 3- kamel mohamed
 4- mohamed hassan 
-<<<<<<< Updated upstream
 5- abd elrahman mohamed  ...
 
 
