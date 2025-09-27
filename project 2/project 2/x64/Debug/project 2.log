@@ -1,3 +1,0 @@
-﻿  project 2.cpp
-C:\visual studio project\project 2\project 2\Validation.h(22,1): warning C4715: 'Validation::isName': not all control paths return a value
-  project 2.vcxproj -> C:\visual studio project\project 2\x64\Debug\project 2.exe
