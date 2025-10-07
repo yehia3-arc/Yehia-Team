@@ -82,6 +82,7 @@ public:
         Employee* employee = admin->searchEmployee(id);
         if (employee != nullptr) {
             employee->displayInfoEmployee();
+            delete employee;
         }
         else {
             cout << "Employee not found!" << endl;
@@ -95,6 +96,7 @@ public:
         Client* client = admin->searchClient(id);
         if (client != nullptr) {
             client->displayInfoClient();
+            delete client;
         }
         else {
             cout << "Client not found!" << endl;
@@ -109,7 +111,7 @@ public:
         cout << "Enter employee ID to edit: ";
         cin >> id;
         cout << "Enter new name: ";
-
+        cin.ignore();
         getline(cin, name);
         cout << "Enter new password: ";
         cin >> password;
@@ -128,7 +130,7 @@ public:
         cout << "Enter client ID to edit: ";
         cin >> id;
         cout << "Enter new name: ";
-
+        cin.ignore();
         getline(cin, name);
         cout << "Enter new password: ";
         cin >> password;
@@ -162,7 +164,7 @@ public:
                 searchForEmployee(admin);
                 break;
             case 6:
-                searchForClient(admin);
+               searchForClient(admin);
                 break;
             case 7:
                 editEmployeeInfo(admin);

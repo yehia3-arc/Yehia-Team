@@ -66,6 +66,7 @@ public:
                 break;
             case 5:
                 updatePassword(client);
+
                 break;
             case 6:
                 return true;

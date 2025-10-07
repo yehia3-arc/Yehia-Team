@@ -44,9 +44,10 @@ public:
         Client* client = employee->searchClient(id);
         if (client != nullptr) {
             client->displayInfoClient();
+            delete client;
         }
         else {
-            cout << "Client not found!\n";
+            cout << "Client not found!"<<endl;
         }
     }
 
@@ -65,7 +66,7 @@ public:
         cin >> balance;
 
         employee->editClient(id, name, password, balance);
-        cout << "Client info updated successfully!\n";
+        cout << "Client info updated successfully!"<<endl;
     }
 
     static Employee* login(int id, string password) {

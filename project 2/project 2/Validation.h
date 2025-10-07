@@ -20,6 +20,7 @@ public:
             }
         }
     }
+ 
     static   bool isPassword(string& p) {
         return p.length() >= 8 && p.length() <= 20;
     }

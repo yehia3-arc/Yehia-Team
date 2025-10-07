@@ -47,7 +47,7 @@ Client* Employee::searchClient(int id) {
     vector<Client> clients = fm.getAllClients();
     for (int i = 0; i < clients.size(); i++) {
         if (clients[i].getId() == id) {
-            return  &clients[i];
+            return  new Client(clients [i]);
         }
     } 
     return nullptr;
@@ -90,7 +90,7 @@ Employee* Admin::searchEmployee(int id) {
     vector<Employee> employees = fm.getAllEmployees();
     for (int i = 0; i < employees.size(); i++) {
         if (employees[i].getId() == id) {
-            return &employees[i];
+            return new Employee(employees[i]);
         }
     }
     return nullptr;
@@ -132,7 +132,7 @@ Client* Admin::searchClient(int id) {
     vector<Client> clients = fm.getAllClients();
     for (int i = 0; i < clients.size(); i++) {
         if (clients[i].getId() == id) {
-            return &clients[i];
+            return new Client(clients[i]);
         }
     }
     return nullptr;
