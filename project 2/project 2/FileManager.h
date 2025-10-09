@@ -48,6 +48,7 @@ Client* Employee::searchClient(int id) {
     for (int i = 0; i < clients.size(); i++) {
         if (clients[i].getId() == id) {
             return  new Client(clients [i]);
+           
         }
     } 
     return nullptr;

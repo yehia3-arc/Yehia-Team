@@ -33,8 +33,24 @@ public:
         string name, password;
         double salary;
 
-        cout << "Enter employee ID: ";
+       
+        FileManager fm;
+        vector<Employee> employees = fm.getAllEmployees();
+        bool flag = true;
+        while (flag) {
+            cout << "Enter employee ID: ";
         cin >> id;
+        for (int i = 0; i < employees.size(); i++) {
+            if (employees[i].getId() == id) {
+                cout << "Id used before" << endl;
+                id = 0;
+                break;
+            }
+        }
+        if (id != 0) {
+            flag = false;
+        }
+        }
         cout << "Enter employee name: ";
         cin >> name;
 
@@ -52,9 +68,24 @@ public:
         int id;
         string name, password;
         double balance;
+        FileManager fm;
+        vector<Client> clients = fm.getAllClients();
+        bool flag = true;
+        while (flag) {
+            cout << "Enter client ID: ";
+            cin >> id;
 
-        cout << "Enter client ID: ";
-        cin >> id;
+            for (int i = 0; i < clients.size(); i++) {
+                if (clients[i].getId() == id) {
+                    cout << "Id used before" << endl;
+                    id = 0;
+                    break;
+                }
+            }
+            if (id != 0) {
+                flag = false;
+            }
+        }
         cout << "Enter client name: ";
         cin >> name;
         cout << "Enter client password: ";

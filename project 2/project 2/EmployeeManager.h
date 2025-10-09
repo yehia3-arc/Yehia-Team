@@ -18,9 +18,24 @@ public:
         int id;
         string name, password;
         double balance;
+        FileManager fm;
+        vector<Client> clients = fm.getAllClients();
+        bool flag = true;
+        while (flag) {
+            cout << "Enter client ID: ";
+            cin >> id;
 
-        cout << "Enter client ID: ";
-        cin >> id;
+            for (int i = 0; i < clients.size(); i++) {
+                if (clients[i].getId() == id) {
+                    cout << "Id used before" << endl;
+                    id = 0;
+                    break;
+                }
+            }
+            if (id != 0) {
+                flag = false;
+            }
+        }
         cout << "Enter client name: ";
         cin >> name;
         cout << "Enter client password: ";
